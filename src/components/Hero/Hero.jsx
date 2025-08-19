@@ -101,12 +101,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="scroll-indicator delay-500">
-        <div className="mouse">
-          <div className="wheel"></div>
-        </div>
-        <div className="scroll-text">Scroll Down</div>
-      </div>
+  {/* Scroll indicator removed as requested */}
     </section>
   );
 };

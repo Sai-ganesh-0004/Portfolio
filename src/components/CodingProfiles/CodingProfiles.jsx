@@ -8,25 +8,25 @@ const CodingProfiles = () => {
 
   const leetcode = {
     username: "Sai_ganesh_0004",
-    problems: 104,
-    contests: 15,
+    problems: 194,
+    contests: 20,
     rating: "1780",
     profileUrl: "https://leetcode.com/u/Sai_ganesh_0004/",
   };
 
   const codeforces = {
     username: "Sai_ganesh_0004",
-    problems: "N/A",
-    contests: "N/A",
-    rating: "N/A",
+    problems: 26,
+    contests: 10,
+    rating: "1462",
     profileUrl: "https://codeforces.com/profile/Sai_ganesh_0004",
   };
 
   const codechef = {
     username: "sai_ganesh0004",
-    problems: 68,
-    contests: 18,
-    rating: "1760 (3★)",
+    problems: 78,
+    contests: 21,
+    rating: "1827 (4★)",
     profileUrl: "https://www.codechef.com/users/sai_ganesh0004",
   };
 
