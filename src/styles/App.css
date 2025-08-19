@@ -1,0 +1,210 @@
+/* Main app container */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* Opening animation states */
+.app.app-loading {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.app.app-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.app::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 25% 25%,
+      var(--gradient-start) 0%,
+      transparent 50%
+    ),
+    radial-gradient(circle at 75% 75%, var(--gradient-end) 0%, transparent 50%),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(168, 85, 247, 0.05) 0%,
+      transparent 70%
+    );
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.8;
+  animation: backgroundFlow 20s infinite linear;
+}
+
+.app::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      2px 2px at 20px 30px,
+      rgba(168, 85, 247, 0.3),
+      transparent
+    ),
+    radial-gradient(2px 2px at 40px 70px, rgba(244, 114, 182, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(251, 146, 60, 0.3), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(168, 85, 247, 0.2), transparent),
+    radial-gradient(
+      2px 2px at 160px 30px,
+      rgba(244, 114, 182, 0.2),
+      transparent
+    );
+  background-size: 200px 200px, 150px 150px, 100px 100px, 250px 250px,
+    180px 180px;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.4;
+  animation: particleFloat 25s infinite ease-in-out;
+}
+
+@keyframes backgroundFlow {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50px) translateY(-25px) rotate(90deg);
+  }
+  50% {
+    transform: translateX(-25px) translateY(-50px) rotate(180deg);
+  }
+  75% {
+    transform: translateX(50px) translateY(-25px) rotate(270deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(30px) translateY(-30px);
+  }
+  66% {
+    transform: translateX(-20px) translateY(20px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+main {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Restore default cursor */
+.custom-cursor,
+.cursor-dot {
+  display: none !important;
+}
+
+body,
+a,
+button,
+.hover-effect,
+* {
+  cursor: auto !important;
+}
+
+/* Scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animations for list items */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger-item.active {
+  animation: staggerFadeIn 0.5s ease forwards;
+}
+
+@keyframes staggerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Pulse animation */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Floating animation */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
