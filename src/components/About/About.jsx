@@ -14,8 +14,8 @@ const About = () => {
     experience: "3",
     projects: "7+",
     certifications: "5+",
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
+    github: "https://github.com/Sai-ganesh-0004",
+    linkedin: "https://www.linkedin.com/in/sai-ganesh0004/",
   };
 
   return (

@@ -8,8 +8,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src="https://via.placeholder.com/40" alt="Logo" className="footer-logo-img" />
-          <span className="footer-logo-text">Your Name</span>
+          <img src="/ChatGPT Image Jun 27, 2025, 10_55_54 PM.png" alt="Logo" className="footer-logo-img" />
+          <span className="footer-logo-text">Sai Ganesh</span>
         </div>
         
         <div className="footer-links">
@@ -20,12 +20,12 @@ const Footer = () => {
         </div>
         
         <div className="footer-social">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="social-icon">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-icon">LinkedIn</a>
+          <a href="https://github.com/Sai-ganesh-0004" target="_blank" rel="noreferrer" className="social-icon">GitHub</a>
+          <a href="https://www.linkedin.com/in/sai-ganesh0004/" target="_blank" rel="noreferrer" className="social-icon">LinkedIn</a>
         </div>
         
         <div className="footer-copyright">
-          <p>&copy; {year} Your Name. All rights reserved.</p>
+          <p>&copy; {year} Sai Ganesh. All rights reserved.</p>
         </div>
       </div>
       

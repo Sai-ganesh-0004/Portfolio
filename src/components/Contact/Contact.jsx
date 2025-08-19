@@ -109,7 +109,7 @@ const Contact = () => {
 
           <div className="socials">
             <a
-              href="https://github.com"
+              href="https://github.com/Sai-ganesh-0004"
               target="_blank"
               rel="noreferrer"
               className="social-link github"
@@ -117,7 +117,7 @@ const Contact = () => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sai-ganesh0004/"
               target="_blank"
               rel="noreferrer"
               className="social-link linkedin"
